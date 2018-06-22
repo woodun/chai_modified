@@ -33,7 +33,7 @@
 # 
 
 CXX=nvcc
-CXX_FLAGS=-std=c++11 -arch=sm_60
+CXX_FLAGS=-std=c++11 -arch=sm_70 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_70,code=sm_70
 
 ifndef CHAI_CUDA_LIB
     $(error CHAI_CUDA_LIB not defined. This environment variable must be defined to point to the location of the CUDA library)
