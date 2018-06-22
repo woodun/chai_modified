@@ -34,7 +34,7 @@
 
 CXX=nvcc
 ifndef CHAI_OPENCV
-CXX_FLAGS=-std=c++11 -arch=sm_61
+CXX_FLAGS=-std=c++11 -arch=sm_70 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_70,code=sm_70
 else
 CXX_FLAGS=-std=c++11 -arch=sm_61 -D CHAI_OPENCV 
 endif
